@@ -1,3 +1,4 @@
+// backend/config/database.js
 const config = require('./index');
 
 module.exports = {
@@ -8,7 +9,7 @@ module.exports = {
     logQueryParameters: true,
     typeValidation: true
   },
-  production: { //configuration for db will change depending on env we're working in
+  production: {
     use_env_variable: 'DATABASE_URL',
     dialect: 'postgres',
     seederStorage: 'sequelize',
