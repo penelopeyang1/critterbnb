@@ -43,14 +43,14 @@ module.exports = {
         email: 'lovelyruby@critter.io',
         firstName: 'Ruby',
         lastName: 'Rabbit',
-        username: 'rubyxoxo',
+        username: 'spacebunny',
         hashedPassword: bcrypt.hashSync('carroteater123')
       },
       {
         email: 'pinkmarina@critter.io',
         firstName: 'Marina',
         lastName: 'Octopus',
-        username: 'pinkiepie',
+        username: 'octopink',
         hashedPassword: bcrypt.hashSync('Underthesea!')
       },
       {
