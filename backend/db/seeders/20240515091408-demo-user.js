@@ -52,6 +52,13 @@ module.exports = {
         lastName: 'Octopus',
         username: 'pinkiepie',
         hashedPassword: bcrypt.hashSync('Underthesea!')
+      },
+      {
+        email: 'metalcherries@critter.io',
+        firstName: 'Cherry',
+        lastName: 'Dog',
+        username: 'altpuppy',
+        hashedPassword: bcrypt.hashSync('RockOn!!!')
       }
     ], { validate: true });
   },
