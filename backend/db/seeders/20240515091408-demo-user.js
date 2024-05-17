@@ -19,18 +19,39 @@ module.exports = {
         hashedPassword: bcrypt.hashSync('password')
       },
       {
-        email: 'user1@user.io',
-        firstName: 'Violet',
-        lastName: 'Bruh',
-        username: 'FakeUser1',
-        hashedPassword: bcrypt.hashSync('password2')
+        email: 'urmom@critter.io',
+        firstName: 'Donny',
+        lastName: 'Jiang',
+        username: 'dotnny',
+        hashedPassword: bcrypt.hashSync('potato999')
       },
       {
-        email: 'user2@user.io',
-        firstName: 'Jett',
-        lastName: 'Rizz',
-        username: 'FakeUser2',
-        hashedPassword: bcrypt.hashSync('password3')
+        email: 'lordraymond@critter.io',
+        firstName: 'Raymond',
+        lastName: 'Cat',
+        username: 'aristocat',
+        hashedPassword: bcrypt.hashSync('StandOnBusiness247')
+      },
+      {
+        email: 'pyang21@critter.io',
+        firstName: 'Penelope',
+        lastName: 'Yang',
+        username: 'gnoccicatt',
+        hashedPassword: bcrypt.hashSync('fortniteballs')
+      },
+      {
+        email: 'lovelyruby@critter.io',
+        firstName: 'Ruby',
+        lastName: 'Rabbit',
+        username: 'rubyxoxo',
+        hashedPassword: bcrypt.hashSync('carroteater123')
+      },
+      {
+        email: 'pinkmarina@critter.io',
+        firstName: 'Marina',
+        lastName: 'Octopus',
+        username: 'pinkiepie',
+        hashedPassword: bcrypt.hashSync('Underthesea!')
       }
     ], { validate: true });
   },
