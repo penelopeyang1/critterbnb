@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         id: 2, // Use a unique ID for each object
-        ownerId: 3,
+        ownerId: 2,
         address: "456 Elm Street",
         city: "Los Angeles",
         state: "California",
