@@ -20,9 +20,9 @@ module.exports = {
       },
       {
         email: 'urmom@critter.io',
-        firstName: 'Donny',
-        lastName: 'Jiang',
-        username: 'dotnny',
+        firstName: 'Jonny',
+        lastName: 'Diang',
+        username: 'jotnny',
         hashedPassword: bcrypt.hashSync('potato999')
       },
       {
