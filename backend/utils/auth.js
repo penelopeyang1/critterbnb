@@ -59,6 +59,7 @@ const restoreUser = (req, res, next) => {
     });
 };
 
+
 // If there is no current user, return an error
 const requireAuth = function (req, _res, next) {
     if (req.user) return next();
@@ -70,29 +71,4 @@ const requireAuth = function (req, _res, next) {
     return next(err);
 }
 
-
-const authorize = (requiredRoles) => {
-    return (req, res, next) => {
-        if (!req.user) {
-            const err = new Error('Authentication required');
-            err.title = 'Authentication required';
-            err.errors = { message: 'Authentication required' };
-            err.status = 401;
-            return next(err);
-        }
-
-        // when the current user doesn't have the correct permissons
-        if (!requiredRoles.some(role => req.user.role === role)) {
-            const err = new Error('Forbidden');
-            err.title = 'Forbidden';
-            err.errors = { message: 'Forbidden' };
-            err.status = 403;
-            return next(err);
-        }
-
-        next();
-    };
-};
-
-
-module.exports = { setTokenCookie, restoreUser, requireAuth, authorize };
+module.exports = { setTokenCookie, restoreUser, requireAuth};

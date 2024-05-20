@@ -10,7 +10,7 @@ const router = express.Router();
 router.get('/current', requireAuth, async (req, res) => {
     const userId = req.user.id;
 
-    // Find all reviews written by the current user
+    // Find all reviews written by the current user - userId
     const reviews = await Review.findAll({
         where: { userId },
         include: [
@@ -53,7 +53,7 @@ router.get('/current', requireAuth, async (req, res) => {
             lng: review.Spot.lng,
             name: review.Spot.name,
             price: review.Spot.price,
-            previewImage: review.Spot.previewImage || null
+            previewImage: review.Spot.previewImage || null //include preview img if avail
         },
         ReviewImages: review.ReviewImages.map(image => ({
             id: image.id,
@@ -73,7 +73,7 @@ router.post('/:reviewId/images', requireAuth, async (req, res) => {
     const { url } = req.body;
     const userId = req.user.id;
 
-    const review = await Review.findOne({
+    const review = await Review.findOne({ //find review in db
         where: { id: reviewId }
     });
     if (!review) {
@@ -82,13 +82,13 @@ router.post('/:reviewId/images', requireAuth, async (req, res) => {
         });
     }
 
-    if (review.userId !== userId) {
+    if (review.userId !== userId) { //check if user is owner of review
         return res.status(403).json({
             message: 'You are not authorized to add an image to this review'
         });
     }
 
-    const imageCount = await ReviewImage.count({
+    const imageCount = await ReviewImage.count({ //num of images associated with review
         where: { reviewId }
     });
     if (imageCount >= 10) {
@@ -97,13 +97,14 @@ router.post('/:reviewId/images', requireAuth, async (req, res) => {
         });
     }
 
+    //review image record
     const newImage = await ReviewImage.create({ reviewId, url });
     res.status(200).json({
         id: newImage.id, url: newImage.url
     });
 });
 
-const validateReview = [
+const validateReview = [ //val middleware for review inputs
     check('review')
         .exists({ checkFalsy: true })
         .withMessage('Review text is required'),
@@ -128,7 +129,7 @@ router.put('/:reviewId', requireAuth, validateReview, async (req, res) => {
         });
     }
 
-    if (review.userId !== userId) {
+    if (reviewExists.userId !== userId) {
         return res.status(403).json({
             message: 'You are not authorized to make changes to this review'
         });
