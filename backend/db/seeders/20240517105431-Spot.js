@@ -13,7 +13,6 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await Spot.bulkCreate([
       {
-        id: 1,
         ownerId: 1,
         address: "123 Disney Lane",
         city: "San Francisco",
@@ -30,7 +29,6 @@ module.exports = {
         previewImage: "image url"
       },
       {
-        id: 2, // Use a unique ID for each object
         ownerId: 2,
         address: "456 Elm Street",
         city: "Los Angeles",
