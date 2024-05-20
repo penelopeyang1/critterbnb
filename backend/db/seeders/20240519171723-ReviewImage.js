@@ -18,10 +18,6 @@ module.exports = {
       {
         reviewId: 2,
         url: 'www.nintendo.com'
-      },
-      {
-        reviewId: 3,
-        url: 'www.youtube.com'
       }
     ]);
   },
