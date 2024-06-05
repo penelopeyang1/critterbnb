@@ -1,0 +1,67 @@
+.spotitem-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.spotitem-container:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    cursor: pointer;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.info-container {
+    padding: 10px;
+}
+
+.city-state-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.city-state {
+    font-weight: bold;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    margin-left: 5px;
+}
+
+.rating-overlay {
+    position: relative;
+}
+
+.star {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: auto;
+}
+
+.avg-rating {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
