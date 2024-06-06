@@ -7,7 +7,11 @@ import DeleteSpotsModal from '../DeleteSpotsModal/DeleteSpotsModal';
 function SpotItem({ spot, isManagePage }) {
     const navigate = useNavigate();
 
-    const onClick = spotId => {
+    const onClick = (event, spotId) => {
+        // check if the click event is not coming from the update or delete buttons
+        if (event.target.closest('.update-and-delete-buttons')) {
+            return;
+        }
         navigate(`/spots/${spotId}`);
     };
 
@@ -30,7 +34,7 @@ function SpotItem({ spot, isManagePage }) {
             </div>
             {isManagePage && ( //check to see if we're on the manageSpots page
                 <div className='update-and-delete-buttons'>
-                    <Link to={`/spots/${spot.id}/edit`}>Update</Link>
+                    <Link to={`/spots/${spot.id}/update`}>Update</Link>
                     <OpenModalButton
                         buttonText='Delete'
                         className='delete-spot-button'

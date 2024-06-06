@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import SpotItem from '../SpotItem';
 import { getAllSpots, selectAllSpots } from '../../store/spots.js';
-import OpenModalButton from '../OpenModalButton/OpenModalButton.jsx';
-import DeleteSpotsModal from '../DeleteSpotsModal/DeleteSpotsModal.jsx';
 
 function ManageSpots() {
     const dispatch = useDispatch();
