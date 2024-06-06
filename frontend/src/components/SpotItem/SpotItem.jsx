@@ -18,7 +18,7 @@ function SpotItem({ spot, isManagePage }) {
     const imageUrl = spot.SpotImages && spot.SpotImages.length > 0 ? spot.SpotImages[0].url : spot.previewImage;
 
     return (
-        <div className='spotitem-container' title={`${spot.name}`} onClick={() => onClick(spot.id)}>
+        <div className='spotitem-container' title={`${spot.name}`} onClick={() => onClick(event, spot.id)}>
             <div className='image-container'>
                 <img className='image' src={imageUrl} alt={`Preview of ${spot.name}`} />
             </div>
