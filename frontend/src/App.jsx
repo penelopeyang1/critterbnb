@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Outlet, createBrowserRouter, RouterProvider } from 'react-router-dom';
 // import LoginFormPage from './components/LoginFormPage';
 // import SignupFormPage from './components/SignupFormPage';
-import Navigation from './components/Navigation/Navigation-bonus';
+import Navigation from './components/Navigation'; //FIXED THE CREATE A SPOT LINK NOT SHOWING UP HERE
 import * as sessionActions from './store/session';
 import { Modal } from './context/Modal';
 
