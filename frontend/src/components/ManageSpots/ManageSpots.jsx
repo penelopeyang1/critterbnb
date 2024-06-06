@@ -24,7 +24,7 @@ function ManageSpots() {
     return (
         <>
             <div className='manage-spots-container'>
-                <h1>Manage Your Spots</h1>
+                <h1>Manage Spots</h1>
                 <div className='create-spot-button'>
                     <Link to='/spots/new'>Create a New Spot</Link>
                 </div>
@@ -32,16 +32,7 @@ function ManageSpots() {
                     <div className='display-spots'>
                         {ownedSpots.length > 0 ? (
                             ownedSpots.map(spot =>
-                                <SpotItem key={spot.id} spot={spot}>
-                                    <div className='edit-and-delete-buttons'>
-                                        <Link to={`/spots/${spot.id}/edit`}>Edit</Link>
-                                        <OpenModalButton
-                                            buttonText='Delete'
-                                            className='delete-spot-button'
-                                            modalComponent={<DeleteSpotsModal spotId={spot.id} />}
-                                        />
-                                    </div>
-                                </SpotItem>
+                                <SpotItem key={spot.id} spot={spot} isManagePage={true} /> //pass isManagePage prop
                             )
                         ) : (
                             <div className='no-spots'>

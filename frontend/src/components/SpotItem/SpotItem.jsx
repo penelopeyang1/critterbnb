@@ -1,7 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import './SpotItem.css';
+import { Link } from 'react-router-dom';
+import OpenModalButton from '../OpenModalButton';
+import DeleteSpotsModal from '../DeleteSpotsModal/DeleteSpotsModal';
 
-function SpotItem({ spot }) {
+function SpotItem({ spot, isManagePage }) {
     const navigate = useNavigate();
 
     const onClick = spotId => {
@@ -25,6 +28,16 @@ function SpotItem({ spot }) {
                     </div>
                 </div>
             </div>
+            {isManagePage && ( //check to see if we're on the manageSpots page
+                <div className='update-and-delete-buttons'>
+                    <Link to={`/spots/${spot.id}/edit`}>Update</Link>
+                    <OpenModalButton
+                        buttonText='Delete'
+                        className='delete-spot-button'
+                        modalComponent={<DeleteSpotsModal spotId={spot.id} />}
+                    />
+                </div>
+            )}
         </div>
     );
 }

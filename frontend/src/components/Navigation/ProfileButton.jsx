@@ -44,6 +44,12 @@ function ProfileButton({ user }) {
         <li>{user.firstName} {user.lastName}</li>
         <li>{user.email}</li>
         <li>
+          <div className='manage'>
+            <Link className='manage-spots' to='/spots' onClick={() => setShowMenu(false)}>
+              <p>Manage Spots</p>
+            </Link>
+          </div>
+
           <button onClick={logout}>Log Out</button>
         </li>
       </ul>
