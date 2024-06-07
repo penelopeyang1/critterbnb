@@ -67,8 +67,8 @@ function LoginFormModal() {
         {errors.message && <p>{errors.message}</p>}
         <button type="submit" disabled={isButtonDisabled}>Log In</button>
         <button className='demo-login' onClick={demoLogin}>
-          <img src='' alt='Demo User' />
-          <h4>Login as a Demo User</h4>
+          <img src='' alt='' />
+          Login as a Demo User
         </button>
       </form>
     </>
