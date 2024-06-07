@@ -1,4 +1,4 @@
-.spotitem-container {
+/* .spotitem-container {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -59,6 +59,63 @@
     position: absolute;
     bottom: 5px;
     right: 5px;
+    background-color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+} */
+
+.spotitem-container {
+    position: relative;
+    /* Ensure absolute positioning is relative to this container */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.image-container {
+    cursor: pointer;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.info-container {
+    padding: 10px;
+}
+
+.city-state-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.city-state {
+    font-weight: bold;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    margin-left: 5px;
+}
+
+
+/* Adjust average rating positioning */
+.avg-rating {
+    /* bottom: 5px; */
+    /* Remove this line */
+    /* right: 5px; */
+    /* Remove this line */
     background-color: #fff;
     padding: 2px 5px;
     border-radius: 3px;
