@@ -141,11 +141,11 @@ function spotsReducer(state = initialState, action) {
             return newSpots;
         }
         case REMOVE_SPOT: {
-            const updatedState = { ...state };
-            delete updatedState[action.spotId];
-            return updatedState;
-            // const { [action.spotId]: removedSpot, ...updatedState } = state;
+            // const updatedState = { ...state };
+            // delete updatedState[action.spotId];
             // return updatedState;
+            const { [action.spotId]: removedSpot, ...updatedState } = state;
+            return updatedState;
         }
         case UPDATE_SPOT: {
             const updatedSpot = action.payload;

@@ -363,6 +363,7 @@ router.put('/:spotId', requireAuth, validateSpotCreation, async (req, res) => {
 
 // DELETE A SPOT
 router.delete('/:spotId', requireAuth, async (req, res) => {
+    console.log('This route is being hit!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
     const { spotId } = req.params;
     const spot = await Spot.findOne({
         where: { id: spotId }

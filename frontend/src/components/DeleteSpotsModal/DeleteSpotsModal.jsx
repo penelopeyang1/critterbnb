@@ -7,8 +7,10 @@ function DeleteSpotsModal({ spotId }) {
     const { closeModal } = useModal();
 
     const handleDelete = async () => {
+        // console.log('HANDLE DELETE HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
         await dispatch(deleteSpot(spotId))
-            .then(closeModal);
+        .then(closeModal);
+        // console.log('AFTER DELETE DISPATH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
     }
 
     return (
