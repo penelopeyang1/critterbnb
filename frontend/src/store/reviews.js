@@ -106,6 +106,11 @@ export const deleteReview = (reviewId) => async dispatch => {
     }
 }
 
+// const initialState = {
+//     reviewsById: {}  // Define reviewsById as an empty object
+// };
+
+const initialState = {};
 // Reducers
 function reviewsReducer(state = initialState, action) {
     switch (action.type) {
