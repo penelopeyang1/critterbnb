@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 
 import { getSpotById } from '../../store/spots';
 import { getReviewsForSpotsById } from '../../store/reviews';
+import OpenModalButton from '../OpenModalButton';
+import ReviewFormModal from '../ReviewFormModal/ReviewFormModal';
 import './SpotDetail.css';
 
 
@@ -13,7 +15,7 @@ function SpotDetail() {
 
     const spot = useSelector(state => state.spots.spotById);
     const reviews = useSelector(state => state.reviews.reviewsById);
-
+    const sessionUser = useSelector(state => state.session.user);
 
     const [isLoaded, setIsLoaded] = useState(false);
     // const [averageRating, setAverageRating] = useState(0);
@@ -79,9 +81,14 @@ function SpotDetail() {
         alert('Feature coming soon!');
     }
 
-    // const hasReviews = reviews && Object.keys(reviews).length > 0;
+    //if the spot has reviews
+    const hasReviews = reviews && Object.keys(reviews).length > 0;
     //handle logged-in users w/ spots vs non spots users
-    
+    const userIsNotSpotOwner = sessionUser && sessionUser.id !== spot?.Owner?.id;
+    // const userHasNotPostedReview = sessionUser && !Object.values(reviews).some(review => review.userId === sessionUser.id);
+    const userHasReviewed = reviews && Object.values(reviews).some(review => review.userId === sessionUser?.id)
+
+
     return (
         <>
             {isLoaded && reviews && spot && (
@@ -104,7 +111,7 @@ function SpotDetail() {
                             <div className='description-text'>{spot.description}</div>
                         </div>
                     </div>
-                    <div className='reserve-summary'>
+                    <div className='reserve-summary-box'>
                         <div className='calloutBox'>
                             <div className='price'>
                                 <p className='price-number'>{spot.price.toLocaleString('en-US')}</p>
@@ -116,10 +123,22 @@ function SpotDetail() {
                             <button onClick={reserve}>Reserve</button>
                         </div>
                     </div>
-                    <div className='review-stats'>
-                            {displayRating()}
-                    </div>
+
+                    <div className='reviews-container'>
                         <h2>Reviews</h2>
+                        <div className='review-stats'>
+                            {displayRating()}
+                        </div>
+                        {!hasReviews && userIsNotSpotOwner && (
+                            <div className='no-reviews'>Be the first to post a review!</div>
+                        )}
+                        {isLoaded && sessionUser && userIsNotSpotOwner && !userHasReviewed && (
+                            <OpenModalButton
+                            buttonText='Post Your Review'
+                            className='post-review-button'
+                            modalComponent={<ReviewFormModal spotId={spot.id} />}
+                            />
+                        )}
                         <div className='user-reviews'>
                             {reviews && Object.values(reviews).sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
                                 .map(review => (
@@ -134,6 +153,7 @@ function SpotDetail() {
                                 ))
                             }
                         </div>
+                    </div>
                 </div>
             )}
         </>
