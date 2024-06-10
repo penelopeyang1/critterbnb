@@ -1,11 +1,9 @@
-/*
 .spotitem-container {
-    position: relative;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    padding: 10px;
-} */
+    width: 320px;
+    margin: 10px 0 10px;
+    z-index: 1;
+    cursor: pointer;
+}
 
 .image-container {
     cursor: pointer;
@@ -31,14 +29,29 @@
 }
 
 .info-container {
-    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+
 }
 
 .city-state-price {
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-start;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.star {
+    width: 35px;
+    height: 35px;
+}
+
+.rating-container {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    margin-bottom: 5px;
+    /* padding-left: 20px; */
 }
 
 .city-state {
@@ -48,6 +61,19 @@
 .price-container {
     display: flex;
     align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bells {
+    width: 40px;
+    height: auto;
 }
 
 .price {
@@ -56,12 +82,7 @@
 
 
 /* Adjust average rating positioning */
-.avg-rating {
-    /* bottom: 5px; */
-    /* Remove this line */
-    /* right: 5px; */
-    /* Remove this line */
-    background-color: #fff;
+/* .avg-rating {
     padding: 2px 5px;
     border-radius: 3px;
     font-size: 14px;
@@ -71,4 +92,4 @@
 .star-fragment {
     width: 20px;
     height: 20px;
-}
+} */

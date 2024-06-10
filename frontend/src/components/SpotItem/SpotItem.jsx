@@ -57,9 +57,14 @@ function SpotItem({ spot, isManagePage }) {
                     <p className='city-state'>{spot.city}, {spot.state}</p>
                     <div className='price-container'>
                         <p className='price'>
-                            $ {spot.price.toLocaleString('en-US')} per night
+                            <img id='bells' src='../../../bells.png' />
+                            {spot.price.toLocaleString('en-US')} per night
                         </p>
                     </div>
+                </div>
+                <div className='rating-container'>
+                    {starRating()}
+                    <div className='rating'>{spot.avgRating ? <p className='avg-rating'>{spot.avgRating.toFixed(1)}</p> : <p className='no-ratings'>NEW</p>}</div>
                 </div>
             </div>
             {isManagePage && ( //check to see if we're on the manageSpots page
@@ -72,10 +77,10 @@ function SpotItem({ spot, isManagePage }) {
                     />
                 </div>
             )}
-            <div className='rating-container'>
+            {/* <div className='rating-container'>
                 {starRating()}
                 <div className='rating'>{spot.avgRating ? <p className='avg-rating'>{spot.avgRating.toFixed(1)}</p> : <p className='no-ratings'>NEW</p>}</div>
-            </div>
+            </div> */}
         </div>
     );
 }
