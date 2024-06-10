@@ -13,14 +13,44 @@ module.exports = {
     await SpotImage.bulkCreate([
       {
         spotId: 1,
-        url: "image url",
+        url: 'https://i.postimg.cc/GhxBJNPf/SS-1.png',
         preview: true
       },
       {
+        spotId: 1,
+        url: 'https://i.postimg.cc/YShh7Scc/SS-2.png',
+        preview: false
+      },
+      {
+        spotId: 1,
+        url: 'https://i.postimg.cc/Jz7sTqPz/SS-3.png',
+        preview: false
+      },
+      {
+        spotId: 1,
+        url: 'https://i.postimg.cc/4yTdpbYZ/SS-4.png',
+        preview: false
+      },
+      {
         spotId: 2,
-        url: "another image url",
-        preview: true
-      }
+        url: 'https://i.postimg.cc/jS8LB7FQ/GG-1.png',
+        preview: false
+      },
+      {
+        spotId: 2,
+        url: 'https://i.postimg.cc/Ss9RXtND/GG-2.png',
+        preview: false
+      },
+      {
+        spotId: 2,
+        url: 'https://i.postimg.cc/xdhq1SYX/GG-3.pngg',
+        preview: false
+      },
+      {
+        spotId: 2,
+        url: 'https://i.postimg.cc/4yb3P7cc/GG-4.png',
+        preview: false
+      },
     ])
   },
 
