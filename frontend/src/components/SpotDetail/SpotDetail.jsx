@@ -6,6 +6,8 @@ import { getSpotById } from '../../store/spots';
 import { getReviewsForSpotsById } from '../../store/reviews';
 import OpenModalButton from '../OpenModalButton';
 import ReviewFormModal from '../ReviewFormModal/ReviewFormModal';
+import ReviewDeleteModal from '../ReviewDeleteModal/ReviewDeleteModal';
+
 import './SpotDetail.css';
 
 
@@ -149,6 +151,13 @@ function SpotDetail() {
                                             <div className='review-date'>{new Date(review.createdAt).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</div>
                                         </div>
                                         <div className='review-text'>{review.review}</div>
+                                        {sessionUser && sessionUser.id === review.userId && (
+                                            <OpenModalButton
+                                                buttonText='Delete'
+                                                className='delete-review-button'
+                                                modalComponent={<ReviewDeleteModal reviewId={review.id} spotId={spot.id} />}
+                                            />
+                                        )}
                                     </div>
                                 ))
                             }

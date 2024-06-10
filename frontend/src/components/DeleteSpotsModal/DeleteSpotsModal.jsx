@@ -20,8 +20,8 @@ function DeleteSpotsModal({ spotId }) {
                 <p>Are you sure you want to remove this spot from the listings?</p>
             </div>
             <div className='confirm-or-not-buttons'>
-                <button onClick={handleDelete} className='delete-button'>Yes(Delete Spot)</button>
-                <button onClick={closeModal} className='cancel-delete-button'>No(Keep Spot)</button>
+                <button onClick={handleDelete} className='delete-button'>Yes (Delete Spot)</button>
+                <button onClick={closeModal} className='cancel-delete-button'>No (Keep Spot)</button>
             </div>
         </div>
     )
