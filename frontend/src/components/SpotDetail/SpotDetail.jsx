@@ -36,16 +36,20 @@ function SpotDetail() {
     // }, [reviews]);
 
     // display spot rating
-    const imageUrl = 'https://dodo.ac/np/images/7/7a/Star_Fragment_NH_Icon.png';
+    // const imageUrl = 'https://dodo.ac/np/images/7/7a/Star_Fragment_NH_Icon.png';
     const displayRating = () => {
         if (spot.avgStarRating !== 0) {
             return (
                 <div className='rating'>
-                    <img id='star-fragment' src={imageUrl} alt='Star Fragment' /> {spot.avgStarRating.toFixed(1)} {checkNumReviews()}
+                    <img id='star-fragment' className='star-fragment' src='../../../star-fragment.png' />
+                    <div className='star-num'>
+                        {spot.avgStarRating.toFixed(1)}
+                        {checkNumReviews()}
+                    </div>
                 </div>
             );
         } else {
-            return <p className='rating new'>NEW</p>;
+            return <p className='rating-new'>NEW</p>;
         }
     }
     //no image display below
@@ -62,9 +66,9 @@ function SpotDetail() {
         if (spot.numReviews < 1) {
             return '';
         } else if (spot.numReviews === 1) {
-            return '• 1 review';
+            return ' • 1 review';
         } else {
-            return `• ${spot.numReviews} reviews`;
+            return ` • ${spot.numReviews} reviews`;
         }
     }
 
@@ -99,12 +103,35 @@ function SpotDetail() {
                         <div className='spot-name'>{spot.name}</div>
                         <div className='spot-location'>{spot.city}, {spot.state}, {spot.country}</div>
                     </div>
-                    <div className='spot-images'>
-                        <img src={spot.SpotImages[0]?.url} alt={`Preview of ${spot.name}`} />
-                        <div className='thumbnails'>
-                            {spot.SpotImages.slice(1, 5).map((image, index) => (
-                                image.url && <img key={index} src={image.url} alt={`Spot ${index + 1}`} />
-                            ))}
+                    {/* <div className='all-images'>
+                        <div className='main-image-container'>
+                            <img className='main-image' src={spot.SpotImages[0]?.url} alt={`Preview of ${spot.name}`} />
+                        </div>
+                        <div className='thumbnail-container'>
+                            <div className='small-images'>
+                                {spot.SpotImages.slice(1, 5).map((image, index) => (
+                                    image.url && <img key={index} src={image.url} alt={`Spot ${index + 1}`} />
+                                ))}
+                            </div>
+                        </div>
+                    </div> */}
+                    <div className='all-images'>
+                        <div className='main-image-container'>
+                            <img className='main-image' src={spot.SpotImages[0]?.url} alt={`Preview of ${spot.name}`} />
+                        </div>
+                        <div className='thumbnail-container'>
+                            <div className='small-images' id='top-left-container'>
+                                {spot.SpotImages[1]?.url && <img className='top-left-image' src={spot.SpotImages[1]?.url} />}
+                            </div>
+                            <div className='small-images' id='top-right-container'>
+                                {spot.SpotImages[2]?.url && <img className='top-right-image' src={spot.SpotImages[2]?.url} />}
+                            </div>
+                            <div className='small-images' id='bottom-left-container'>
+                                {spot.SpotImages[3]?.url && <img className='bottom-left-image' src={spot.SpotImages[3]?.url} />}
+                            </div>
+                            <div className='small-images' id='bottom-right-container'>
+                                {spot.SpotImages[4]?.url && <img className='bottom-right-image' src={spot.SpotImages[4]?.url} />}
+                            </div>
                         </div>
                     </div>
                     <div className='spot-description'>
@@ -112,22 +139,26 @@ function SpotDetail() {
                             <div className='host-name'>Hosted by {spot.Owner?.firstName} {spot.Owner?.lastName}</div>
                             <div className='description-text'>{spot.description}</div>
                         </div>
-                    </div>
-                    <div className='reserve-summary-box'>
-                        <div className='calloutBox'>
-                            <div className='price'>
-                                <p className='price-number'>{spot.price.toLocaleString('en-US')}</p>
-                                <p className='per-night'>per night</p>
+                        <div className='reserve-summary-box'>
+                            <div className='calloutBox'>
+                                <div className='price'>
+                                    <img id='bells' src='../../../bells.png'/>
+                                    <p className='price-number'>{spot.price.toLocaleString('en-US')}</p>
+                                    <p className='per-night'>night</p>
+                                </div>
+                                <div className='box-review-stats'>
+                                    {displayRating()}
+                                </div>
+                                <div className='calloutDivider'></div>
+                                <button onClick={reserve}>Reserve</button>
                             </div>
-                            <div className='box-review-stats'>
-                                {displayRating()}
-                            </div>
-                            <button onClick={reserve}>Reserve</button>
                         </div>
                     </div>
 
                     <div className='reviews-container'>
-                        <h2>Reviews</h2>
+                        <div className='reviews-title'>
+                            <h2>Reviews</h2>
+                        </div>
                         <div className='review-stats'>
                             {displayRating()}
                         </div>

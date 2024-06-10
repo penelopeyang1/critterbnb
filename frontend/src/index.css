@@ -1,1 +1,29 @@
 /* TODO: Add sitewide styles */
+* {
+    font-family: 'Garet-Book';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Garet-Book';
+    src: url('/fonts/Garet-Book.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Garet-Heavy';
+    src: url('/fonts/Garet-Heavy.ttf') format('truetype');
+    font-weight: bold;
+}
+
+body {
+    background-color: #f8f7de;
+    /* background-color: #FEDFA7; */
+    /* Replace with your desired color */
+    font-family: 'Garet-Book', sans-serif;
+    /* Ensure your font is applied here as well */
+    margin: 0;
+    padding: 0;
+}

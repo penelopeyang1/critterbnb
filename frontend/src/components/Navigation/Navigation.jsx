@@ -1,4 +1,4 @@
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import OpenModalButton from '../OpenModalButton';
@@ -21,30 +21,67 @@ function Navigation({ isLoaded }) {
       <>
         <li>
           <OpenModalButton
+            className='login-button'
             buttonText="Log In"
             modalComponent={<LoginFormModal />}
           />
-          {/* <NavLink to="/login">Log In</NavLink> */}
         </li>
         <li>
           <OpenModalButton
+            className='signup-button'
             buttonText="Sign Up"
             modalComponent={<SignupFormModal />}
           />
-          {/* <NavLink to="/signup">Sign Up</NavLink> */}
         </li>
       </>
     );
 
   return (
-    <ul>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
-      {isLoaded && sessionLinks}
-    </ul>
+      <ul className='nav-elements'>
+        <li>
+          <Link className='logo' to='/'>
+            <img className='logo-png' src='../../../critterbnb.png' />
+          </Link>
+        </li>
+        {isLoaded && sessionLinks}
+      </ul>
   );
 }
 
-
 export default Navigation;
+
+//upper function too hard to style :(
+// function Navigation({ isLoaded }) {
+//   const sessionUser = useSelector(state => state.session.user);
+
+//   return (
+//     <nav className='navigation-container'>
+//       <Link className='logo' to='/'>
+//         <img className='logo-png' src='../../../critterbnb.png' />
+//       </Link>
+//       {isLoaded && (sessionUser ? (
+//         <div className='logged-in'>
+//           <Link className='create-spot-button' to='/spots/new'>
+//             <h4>Create a New Spot</h4>
+//           </Link>
+//           <ProfileButton user={sessionUser} />
+//         </div>
+//       ) : (
+//         <div className='signup-login-container'>
+//           <OpenModalButton
+//             buttonText="Log In"
+//             modalComponent={<LoginFormModal />}
+//             className='login-button'
+//           />
+//           <OpenModalButton
+//             buttonText="Sign Up"
+//             modalComponent={<SignupFormModal />}
+//             className='signup-button'
+//           />
+//         </div>
+//       ))}
+//     </nav>
+//   );
+// }
+
+// export default Navigation;

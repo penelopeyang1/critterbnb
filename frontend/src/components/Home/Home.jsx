@@ -22,12 +22,17 @@ function Home() {
             {isLoaded && (
                 <div className='home-container'>
                     <div className='spots-container'>
-                        <h1>Critter Favorites</h1>
+                        <div className='favorites-title'>
+                            <h1>Critter Favorites</h1>
+                        </div>
                         <div className='display-spots'>
                             {spots.map((spot) => (
                                 <SpotItem key={spot.id} spot={spot} />
                             ))}
                         </div>
+                    </div>
+                    <div className='map-container'>
+                        <img className='map' id='acnh-map' src='../../../acnh-map.png' />
                     </div>
                 </div>
             )}

@@ -1,15 +1,21 @@
 .home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 20px;
 }
 
 .spots-container {
-    text-align: center;
+    flex: 1;
+    text-align: left;
+    margin-left: 20px;
 }
 
 .display-spots {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
+    gap: 50px;
 }
 
 .spot-item {
@@ -22,6 +28,21 @@
 }
 
 .spot-image {
+    width: 100px;
+    /* Adjust width as needed */
+    height: 100px;
+    /* Adjust height as needed */
+    object-fit: cover;
+    /* Ensures the image covers the area while maintaining aspect ratio */
+    border-radius: 8px;
+    /* Optional: adds rounded corners */
+    border: 2px solid #ccc;
+    /* Optional: adds a border */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* Optional: adds a shadow */
+}
+
+.spot-image {
     width: 100%;
     height: auto;
     border-radius: 4px;
@@ -29,4 +50,22 @@
 
 .spot-info {
     padding: 10px 0;
+}
+
+.map {
+    width: 800px;
+    height: auto;
+    margin-top: 30px;
+
+}
+
+.map-container {
+    flex-shrink: 0;
+}
+
+.favorites-title {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: Garet-Heavy;
 }
