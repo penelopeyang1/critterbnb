@@ -34,7 +34,7 @@ module.exports = {
       {
         spotId: 2,
         url: 'https://i.postimg.cc/jS8LB7FQ/GG-1.png',
-        preview: false
+        preview: true
       },
       {
         spotId: 2,
