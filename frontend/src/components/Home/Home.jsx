@@ -23,7 +23,7 @@ function Home() {
                 <div className='home-container'>
                     <div className='spots-container'>
                         <div className='favorites-title'>
-                            <h1>Critter Favorites</h1>
+                            {/* <h1>Critter Favorites</h1> */}
                         </div>
                         <div className='display-spots'>
                             {spots.map((spot) => (

@@ -7,44 +7,80 @@ import SignupFormModal from '../SignupFormModal';
 import './Navigation.css';
 
 function Navigation({ isLoaded }) {
+  // const sessionUser = useSelector(state => state.session.user);
+
+  // const sessionLinks = sessionUser ?
+  //   (
+  //     <li className='logged-in'>
+  //     <Link className='create-spot-button' to='/spots/new'>
+  //       Create a New Spot
+  //     </Link>
+  //     <ProfileButton user={sessionUser} />
+  //   </li>
+  //   ) : (
+  //     <>
+  //       <li>
+  //         <OpenModalButton
+  //           className='login-button'
+  //           buttonText="Log In"
+  //           modalComponent={<LoginFormModal />}
+  //         />
+  //       </li>
+  //       <li>
+  //         <OpenModalButton
+  //           className='signup-button'
+  //           buttonText="Sign Up"
+  //           modalComponent={<SignupFormModal />}
+  //         />
+  //       </li>
+  //     </>
+  //   );
+
+  // return (
+  //     <ul className='nav-elements'>
+  //       <li>
+  //         <Link className='logo' to='/'>
+  //           <img className='logo-png' src='../../../critterbnb.png' />
+  //         </Link>
+  //       </li>
+  //       {isLoaded && sessionLinks}
+  //     </ul>
+  // );
   const sessionUser = useSelector(state => state.session.user);
 
-  const sessionLinks = sessionUser ?
-    (
-      <li className='logged-in'>
+  const sessionLinks = sessionUser ? (
+    <div className='logged-in'>
       <Link className='create-spot-button' to='/spots/new'>
         Create a New Spot
       </Link>
       <ProfileButton user={sessionUser} />
-    </li>
-    ) : (
-      <>
-        <li>
-          <OpenModalButton
-            className='login-button'
-            buttonText="Log In"
-            modalComponent={<LoginFormModal />}
-          />
-        </li>
-        <li>
-          <OpenModalButton
-            className='signup-button'
-            buttonText="Sign Up"
-            modalComponent={<SignupFormModal />}
-          />
-        </li>
-      </>
-    );
+    </div>
+  ) : (
+    <div className='auth-buttons'>
+      <div className='login-button-wrapper'>
+        <OpenModalButton
+          className='login-button'
+          buttonText="Log In"
+          modalComponent={<LoginFormModal />}
+        />
+      </div>
+      <div className='signup-button-wrapper'>
+        <OpenModalButton
+          className='signup-button'
+          buttonText="Sign Up"
+          modalComponent={<SignupFormModal />}
+        />
+      </div>
+    </div>
+  );
 
   return (
-      <ul className='nav-elements'>
-        <li>
-          <Link className='logo' to='/'>
-            <img className='logo-png' src='../../../critterbnb.png' />
-          </Link>
-        </li>
-        {isLoaded && sessionLinks}
-      </ul>
+    <div className='nav-elements'>
+        <Link className='logo' to='/'>
+          <img className='logo-png' src='../../../critter-logo.png' alt='Logo' />
+        </Link>
+      {isLoaded && sessionLinks}
+    </div>
   );
 }
 
