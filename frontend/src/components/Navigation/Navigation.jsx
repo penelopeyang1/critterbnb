@@ -7,45 +7,6 @@ import SignupFormModal from '../SignupFormModal';
 import './Navigation.css';
 
 function Navigation({ isLoaded }) {
-  // const sessionUser = useSelector(state => state.session.user);
-
-  // const sessionLinks = sessionUser ?
-  //   (
-  //     <li className='logged-in'>
-  //     <Link className='create-spot-button' to='/spots/new'>
-  //       Create a New Spot
-  //     </Link>
-  //     <ProfileButton user={sessionUser} />
-  //   </li>
-  //   ) : (
-  //     <>
-  //       <li>
-  //         <OpenModalButton
-  //           className='login-button'
-  //           buttonText="Log In"
-  //           modalComponent={<LoginFormModal />}
-  //         />
-  //       </li>
-  //       <li>
-  //         <OpenModalButton
-  //           className='signup-button'
-  //           buttonText="Sign Up"
-  //           modalComponent={<SignupFormModal />}
-  //         />
-  //       </li>
-  //     </>
-  //   );
-
-  // return (
-  //     <ul className='nav-elements'>
-  //       <li>
-  //         <Link className='logo' to='/'>
-  //           <img className='logo-png' src='../../../critterbnb.png' />
-  //         </Link>
-  //       </li>
-  //       {isLoaded && sessionLinks}
-  //     </ul>
-  // );
   const sessionUser = useSelector(state => state.session.user);
 
   const sessionLinks = sessionUser ? (
@@ -53,7 +14,7 @@ function Navigation({ isLoaded }) {
       <Link className='create-spot-button' to='/spots/new'>
         Create a New Spot
       </Link>
-      <ProfileButton user={sessionUser} />
+      <ProfileButton className='prof-button' user={sessionUser}/>
     </div>
   ) : (
     <div className='auth-buttons'>
@@ -77,7 +38,7 @@ function Navigation({ isLoaded }) {
   return (
     <div className='nav-elements'>
         <Link className='logo' to='/'>
-          <img className='logo-png' src='../../../critter-logo.png' alt='Logo' />
+          <img className='logo-png' src='../../../brown-logo.png' alt='Logo' />
         </Link>
       {isLoaded && sessionLinks}
     </div>
@@ -85,39 +46,3 @@ function Navigation({ isLoaded }) {
 }
 
 export default Navigation;
-
-//upper function too hard to style :(
-// function Navigation({ isLoaded }) {
-//   const sessionUser = useSelector(state => state.session.user);
-
-//   return (
-//     <nav className='navigation-container'>
-//       <Link className='logo' to='/'>
-//         <img className='logo-png' src='../../../critterbnb.png' />
-//       </Link>
-//       {isLoaded && (sessionUser ? (
-//         <div className='logged-in'>
-//           <Link className='create-spot-button' to='/spots/new'>
-//             <h4>Create a New Spot</h4>
-//           </Link>
-//           <ProfileButton user={sessionUser} />
-//         </div>
-//       ) : (
-//         <div className='signup-login-container'>
-//           <OpenModalButton
-//             buttonText="Log In"
-//             modalComponent={<LoginFormModal />}
-//             className='login-button'
-//           />
-//           <OpenModalButton
-//             buttonText="Sign Up"
-//             modalComponent={<SignupFormModal />}
-//             className='signup-button'
-//           />
-//         </div>
-//       ))}
-//     </nav>
-//   );
-// }
-
-// export default Navigation;
