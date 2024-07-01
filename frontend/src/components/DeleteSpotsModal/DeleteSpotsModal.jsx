@@ -1,6 +1,7 @@
 import { deleteSpot } from '../../store/spots';
 import { useDispatch } from 'react-redux';
 import { useModal } from '../../context/Modal';
+import './DeleteSpotsModal.css';
 
 function DeleteSpotsModal({ spotId }) {
     const dispatch = useDispatch();
@@ -15,7 +16,8 @@ function DeleteSpotsModal({ spotId }) {
 
     return (
         <div className='confirm-delete-container'>
-            <h2>Confirm Delete</h2>
+            <h2 className='conf-delete'>Confirm Delete</h2>
+            <div className='divider-line'></div>
             <div className='confirm-text'>
                 <p>Are you sure you want to remove this spot from the listings?</p>
             </div>

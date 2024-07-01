@@ -1,0 +1,51 @@
+.confirm-delete-container {
+    width: 400px;
+    height: 280px;
+    padding: 25px;
+    border-radius: 40px;
+    background-color: #f8f7de;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.conf-delete {
+    font-size: 25px;
+}
+
+.confirm-text {
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+.confirm-or-not-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.delete-button {
+    width: 100px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: red;
+    color: #f8f7de;
+    border-radius: 15px;
+    padding: 3px;
+}
+
+.cancel-delete-button {
+    width: 100px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: #815C2F;
+    color: #f8f7de;
+    border-radius: 15px;
+    padding: 3px;
+}
