@@ -43,35 +43,47 @@ function LoginFormModal() {
   }
 
   return (
-    <>
-      <h1>Log In</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Username or Email
-          <input
-            type="text"
-            value={credential}
-            onChange={(e) => setCredential(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Password
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
-        {errors.message && <p>{errors.message}</p>}
-        <button type="submit" disabled={isButtonDisabled}>Log In</button>
-        <button className='demo-login' onClick={demoLogin}>
-          <img src='' alt='' />
-          Login as a Demo User
-        </button>
-      </form>
-    </>
+    <div className='login-form'>
+      <div className='login-header'>
+        <h1 className='login'>Log In</h1>
+        <div className='divider-line'></div>
+      </div>
+
+      <div className='login-inputs'>
+        <form className='inputs' onSubmit={handleSubmit}>
+          <label className='user-email'>
+          {/* Username or Email */}
+            <input
+              type="text"
+              className='user-email-input'
+              placeholder='Username or Email'
+              value={credential}
+              onChange={(e) => setCredential(e.target.value)}
+              required
+            />
+          </label>
+          <label className='password'>
+            {/* Password */}
+            <input
+              className='password-input'
+              placeholder='Password'
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </label>
+          <div className='error-message'>
+            {errors.message && <p>{errors.message}</p>}
+          </div>
+          <button className="login-button" type="submit" disabled={isButtonDisabled}>Log In</button>
+          <button className='demo-login' onClick={demoLogin}>
+            Login as a Demo User
+            <img className='timmy-icon' src='../../../timmy-icon.png' alt='' />
+          </button>
+        </form>
+      </div>
+    </div>
   );
 }
 

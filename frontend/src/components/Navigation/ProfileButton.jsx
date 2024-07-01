@@ -40,8 +40,9 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <button onClick={toggleMenu}>
-        <i className="fas fa-user-circle" />
+      <button className='profile-button' onClick={toggleMenu}>
+        {/* <i className="fas fa-user-circle" /> */}
+        <img className='timmy-icon' src='../../../timmy-icon.png' alt='' />
         <div className='lines'>
           <span></span>
           <span></span>
@@ -51,8 +52,8 @@ function ProfileButton({ user }) {
       <ul className={ulClassName} ref={ulRef}>
         <li className='hello-user'>Hello, {user.firstName}</li>
         {/* <hr className='divider-line'/> */}
-        <li>{user.username}</li>
-        <li>{user.email}</li>
+        <li className='username'>{user.username}</li>
+        <li className='email'>{user.email}</li>
         <li>
           <div className='manage'>
             <Link className='manage-spots' to='/spots' onClick={() => setShowMenu(false)}>
