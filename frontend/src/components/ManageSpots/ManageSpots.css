@@ -1,0 +1,66 @@
+.manage-spots-container {
+    display: flex;
+    /* align-items: left; */
+    /* justify-content: flex-start; */
+    flex-direction: column;
+    margin-left: 45px;
+}
+
+
+.create-new-spot-button {
+    display: inline-block;
+    /* div is treated like a button */
+    cursor: pointer;
+}
+
+.create-new-spot-button a {
+    display: block;
+    /* link behaves like a block element */
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: #815C2F;
+    color: #f8f7de;
+    border-radius: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    /* Center text horizontally */
+    margin-bottom: 15px;
+}
+
+.manage-spots-container h1 {
+    margin-top: 10px;
+}
+
+.update-and-delete-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.update-and-delete-buttons a {
+    width: 50%;
+    background-color: #815C2F;
+    color: #f8f7de;
+    border-radius: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 13.5px;
+    cursor: pointer;
+}
+
+.update-and-delete-buttons button {
+    width: 50%;
+    background-color: red;
+    color: #f8f7de;
+    border-radius: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}

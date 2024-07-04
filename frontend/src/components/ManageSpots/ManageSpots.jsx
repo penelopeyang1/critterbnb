@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import SpotItem from '../SpotItem';
 import { getAllSpots, selectAllSpots } from '../../store/spots.js';
+import './ManageSpots.css';
 
 function ManageSpots() {
     const dispatch = useDispatch();
@@ -23,7 +24,7 @@ function ManageSpots() {
         <>
             <div className='manage-spots-container'>
                 <h1>Manage Spots</h1>
-                <div className='create-spot-button'>
+                <div className='create-new-spot-button'>
                     <Link to='/spots/new'>Create a New Spot</Link>
                 </div>
                 <div className='spots-owned-container'>
