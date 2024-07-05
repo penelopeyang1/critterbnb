@@ -38,7 +38,7 @@ function Navigation({ isLoaded }) {
   return (
     <div className='nav-elements'>
         <Link className='logo' to='/'>
-          <img className='logo-png' src='../../../brown-logo.png' alt='Logo' />
+          <img className='logo-png' src='../../../bold-logo.png' alt='Logo' />
         </Link>
       {isLoaded && sessionLinks}
     </div>
