@@ -4,6 +4,7 @@ import { updateSpot, } from '../../store/spots';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getSpotById } from '../../store/spots.js';
 
+import './UpdateSpot.css'
 //copy-paste validate form and state variables from create spot w/o image updates
 //don't forget to implement spots
 function UpdateSpot() {
@@ -45,6 +46,14 @@ function UpdateSpot() {
     useEffect(() => {
         if (!spot) { //if not yet loaded
             dispatch(getSpotById(spotId)); //action to fetch spotId
+        } else {
+            setCountry(spot.country);
+            setAddress(spot.address);
+            setCity(spot.city);
+            setState(spot.state);
+            setDescription(spot.description);
+            setName(spot.name);
+            setPrice(spot.price);
         }
     }, [dispatch, spotId, spot]); //re-run if spot changes
 
