@@ -34,6 +34,9 @@ function Home() {
                     <div className='map-container'>
                         <img className='map' id='acnh-map' src='../../../acnh-map.png' />
                     </div>
+                    {/* <div className='footer'>
+
+                    </div> */}
                 </div>
             )}
         </>
