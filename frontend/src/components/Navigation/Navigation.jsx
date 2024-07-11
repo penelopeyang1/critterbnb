@@ -11,7 +11,7 @@ function Navigation({ isLoaded }) {
 
   const sessionLinks = sessionUser ? (
     <div className='logged-in'>
-      <Link className='create-spot-button' to='/spots/new'>
+      <Link className='create-spot-link' to='/spots/new'>
         Create a New Spot
       </Link>
       <ProfileButton className='prof-button' user={sessionUser}/>

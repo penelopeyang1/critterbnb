@@ -92,7 +92,7 @@
 }
 /* figure out how to separate prof button styling and button styling */
 
-.logged-in .create-spot-button {
+.logged-in .create-spot-link {
   text-decoration: none;
   margin-top: 11px;
   color: #815C2F;

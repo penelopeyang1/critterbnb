@@ -41,7 +41,7 @@ function SpotDetail() {
         if (spot.avgStarRating !== 0) {
             return (
                 <div className='rating'>
-                    <img id='star-fragment' className='star-fragment' src='../../../star-fragment.png' />
+                    <img id='star-fragment' className='star-fragment' src='../../../star.png' />
                     <div className='star-num'>
                         {spot.avgStarRating.toFixed(1)}
                         {checkNumReviews()}
@@ -142,7 +142,7 @@ function SpotDetail() {
                         <div className='reserve-summary-box'>
                             <div className='calloutBox'>
                                 <div className='price'>
-                                    <img id='bells' src='../../../bells.png'/>
+                                    <img id='bells' src='../../../bells-hd.png'/>
                                     <p className='price-number'>{spot.price.toLocaleString('en-US')}</p>
                                     <p className='per-night'>night</p>
                                 </div>

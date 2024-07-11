@@ -1,15 +1,21 @@
 /* TODO: Add sitewide styles */
 * {
-    font-family: 'Garet-Book';
+    font-family: 'FOT-Seurat';
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 @font-face {
-    font-family: 'Garet-Book';
+    font-family: 'FOT-Seurat';
     src: url('/fonts/FOT-Seurat Pro DB.otf') format('truetype');
     font-weight: normal;
+}
+
+@font-face {
+    font-family: 'FOT-Seurat';
+    src: url('/fonts/FOT-Seurat Pro B.otf') format('truetype');
+    font-weight: bold;
 }
 
 @font-face {
