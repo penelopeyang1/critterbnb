@@ -16,6 +16,10 @@ function ReviewFormModal({ spotId }) {
 
     const validSubmit = stars > 0 && reviewText.length >= 10;
 
+    const newStars = (newRating) => {
+        setStars(newRating);
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (validSubmit) {
@@ -45,7 +49,7 @@ function ReviewFormModal({ spotId }) {
             )} */}
             <form className='review-form' onSubmit={(e) => handleSubmit(e)}>
                 <div className='star-rating'>
-                    <label htmlFor='stars'>Stars</label>
+                    {/* <label htmlFor='stars'>Stars</label>
                     <input
                         type='number'
                         id='stars'
@@ -54,7 +58,16 @@ function ReviewFormModal({ spotId }) {
                         value={stars}
                         onChange={(e) => setStars(e.target.value)}
                         required
-                    />
+                    /> */}
+                    {[1, 2, 3, 4, 5].map((num) => (
+                        <img
+                            className='grayed-out-stars'
+                            key={num}
+                            src={num <= stars ? '../../../star.png' : '../../../gray-star.png'}
+                            onClick={() => newStars(num)}
+                            alt={`${num} Star`}
+                        />
+                    ))}<p>Stars</p>
                 </div>
                 <div className='review-form-text-submit'>
                     <textarea

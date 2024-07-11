@@ -30,17 +30,17 @@ function SpotItem({ spot, isManagePage }) {
         // } else if (spot.avgRating > 0) {
         //     return <img className='star' src='../../../star-fragment.png' alt='1 star' />;
         // }
-        // const imageUrl = 'https://dodo.ac/np/images/7/7a/Star_Fragment_NH_Icon.png';
+    
         if (spot.avgRating === 5) {
-            return <img className='star' src='./star-fragment.png' alt='5 stars' />;
+            return <img className='star' src='./star.png' alt='5 stars' />;
         } else if (spot.avgRating < 5 && spot.avgRating >= 4) {
-            return <img className='star' src='./star-fragment.png' />;
+            return <img className='star' src='./star.png' />;
         } else if (spot.avgRating < 4 && spot.avgRating >= 3) {
-            return <img className='star' src='./star-fragment.png' />;
+            return <img className='star' src='./star.png' />;
         } else if (spot.avgRating < 3 && spot.avgRating >= 2) {
-            return <img className='star' src='./star-fragment.png' />;
+            return <img className='star' src='./star.png' />;
         } else if (spot.avgRating > 0) {
-            return <img className='star' src='./star-fragment.png' />;
+            return <img className='star' src='./star.png' />;
         }
     }
 
@@ -57,7 +57,7 @@ function SpotItem({ spot, isManagePage }) {
                     <p className='city-state'>{spot.city}, {spot.state}</p>
                     <div className='price-container'>
                         <p className='price'>
-                            <img id='bells' src='../../../bells.png' />
+                            <img id='bells' src='../../../bells-hd.png' />
                             {spot.price.toLocaleString('en-US')} per night
                         </p>
                     </div>

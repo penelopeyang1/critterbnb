@@ -29,7 +29,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 8px;
+    margin-top: -8px;
 }
 
 .review-form-input {
@@ -60,4 +60,17 @@
 .error-message {
     color: red;
     font-size: 10px;
+}
+
+/* .star-rating {
+    display: flex;
+    gap: 2px;
+} */
+
+.star-rating p {
+    margin-left: 80px;
+}
+
+.grayed-out-stars {
+    width: 40px;
 }
