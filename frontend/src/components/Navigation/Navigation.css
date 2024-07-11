@@ -97,6 +97,7 @@
   margin-top: 11px;
   color: #815C2F;
   font-size: 15px;
+  font-weight: bold;
 }
 
 .lines {
@@ -164,6 +165,7 @@
 .manage .manage-spots {
   text-decoration: none;
   color: #815C2F;
+  font-weight: bold;
 }
 
 .logout-button {

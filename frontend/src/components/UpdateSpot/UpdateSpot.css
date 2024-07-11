@@ -1,0 +1,10 @@
+.update-spot-button {
+    width: 150px;
+    cursor: pointer;
+    border: none;
+    background-color: #815C2F;
+    color: #f8f7de;
+    border-radius: 10px;
+    padding: 8px;
+    margin-top: 15px;
+}

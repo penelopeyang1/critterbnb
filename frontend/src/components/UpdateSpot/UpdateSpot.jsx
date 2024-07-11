@@ -90,19 +90,19 @@ function UpdateSpot() {
                     <div className='input-area-info'>
                         <div className='country'>
                             <p>Country {errors.country && <span className="error">{errors.country}</span>}</p>
-                            <input type="text" value={country} onChange={(e) => setCountry(e.target.value)} placeholder="Country" />
+                            <input className='input' type="text" value={country} onChange={(e) => setCountry(e.target.value)} placeholder="Country" />
                         </div>
                         <div className='address'>
                             <p>Street Address {errors.address && <span className="error">{errors.address}</span>}</p>
-                            <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Street Address" />
+                            <input className='input' type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Street Address" />
                         </div>
                         <div className='city'>
                             <p>City {errors.city && <span className="error">{errors.city}</span>}</p>
-                            <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="City" />
+                            <input className='input' type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="City" />
                         </div>
                         <div className='state'>
                             <p>State {errors.state && <span className="error">{errors.state}</span>}</p>
-                            <input type="text" value={state} onChange={(e) => setState(e.target.value)} placeholder="State" />
+                            <input className='input' type="text" value={state} onChange={(e) => setState(e.target.value)} placeholder="State" />
                         </div>
                     </div>
                 </section>
@@ -115,7 +115,7 @@ function UpdateSpot() {
                     <div className='input-area'>
                         <div className='description-form'>
                             <p>Describe your place {errors.description && <span className="error">{errors.description}</span>}</p>
-                            <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Please write at least 30 characters" />
+                            <textarea className='describe-input' value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Please write at least 30 characters" />
                         </div>
                     </div>
                 </section>
@@ -128,7 +128,7 @@ function UpdateSpot() {
                     <div className='input-area'>
                         <div>
                             <p>Spot Title {errors.name && <span className="error">{errors.name}</span>}</p>
-                            <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Name of your spot" />
+                            <input className='input' type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Name of your spot" />
                         </div>
                     </div>
                 </section>
@@ -141,7 +141,7 @@ function UpdateSpot() {
                     <div className='input-area'>
                         <div>
                             <p>Price per night {errors.price && <span className="error">{errors.price}</span>}</p>
-                            <input type="number" className='price-input-area' value={price} onChange={(e) => setPrice(e.target.value)} placeholder="Price per night (bells)" />
+                            <input type="number" className='input' value={price} onChange={(e) => setPrice(e.target.value)} placeholder="Price per night (bells)" />
                         </div>
                     </div>
                 </section>
@@ -150,7 +150,7 @@ function UpdateSpot() {
 
 
                 <section className='button-section'>
-                    <button className='create-spot-button' type="submit">Update your Spot</button>
+                    <button className='update-spot-button' type="submit">Update your Spot</button>
                 </section>
             </form>
         </>
