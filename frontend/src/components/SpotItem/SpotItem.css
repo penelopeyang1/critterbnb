@@ -40,22 +40,29 @@
     justify-content:flex-start;
     flex-direction: column;
     margin-top: 10px;
+    margin-left: 5px;
 }
 
 .star {
     width: 23px;
     height: 23px;
+    margin-top: 3px;
 }
 
 .rating-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    margin-top: 10px;
+    margin-right: 5px;
+    gap: 4px;
+    /* align-items: center; */
+
     /* padding-left: 20px; */
 }
 
 .city-state {
     font-weight: bold;
+    line-height: 1.2;
 }
 
 .price-container {
@@ -65,27 +72,33 @@
     text-align: center;
 }
 
-.price {
+.price-container .price {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 3px;
+    margin-top: 5px;
+    letter-spacing: -1px;
 }
 
-#bells {
+.city-state-price #bells {
     width: 20px;
     height: 8px;
 }
 
-.price {
-    margin-left: 5px;
+.rating-container .no-ratings {
+    margin-left: 50px;
+    color: red;
+    font-style: italic;
 }
 
 
-/* Adjust average rating positioning */
-/* .avg-rating {
+
+
+/* Adjust average rating positioning
+.avg-rating {
     padding: 2px 5px;
     border-radius: 3px;
     font-size: 14px;
     font-weight: bold;
 }
-
