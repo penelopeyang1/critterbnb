@@ -43,8 +43,8 @@
 }
 
 .star {
-    width: 35px;
-    height: 35px;
+    width: 23px;
+    height: 23px;
 }
 
 .rating-container {
@@ -72,8 +72,8 @@
 }
 
 #bells {
-    width: 40px;
-    height: auto;
+    width: 20px;
+    height: 8px;
 }
 
 .price {
@@ -89,7 +89,3 @@
     font-weight: bold;
 }
 
-.star-fragment {
-    width: 20px;
-    height: 20px;
-} */
