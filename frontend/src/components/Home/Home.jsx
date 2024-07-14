@@ -31,9 +31,9 @@ function Home() {
                             ))}
                         </div>
                     </div>
-                    <div className='map-container'>
+                    {/* <div className='map-container'>
                         <img className='map' id='acnh-map' src='../../../acnh-map.png' />
-                    </div>
+                    </div> */}
                     {/* <div className='footer'>
 
                     </div> */}
