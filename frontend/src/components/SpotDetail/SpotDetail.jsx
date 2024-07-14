@@ -141,20 +141,21 @@ function SpotDetail() {
                         </div>
                         <div className='reserve-summary-box'>
                             <div className='calloutBox'>
-                                <div className='price'>
-                                    <img id='bells' src='../../../bells-hd.png'/>
-                                    <p className='price-number'>{spot.price.toLocaleString('en-US')}</p>
-                                    <p className='per-night'>night</p>
-                                </div>
-                                <div className='box-review-stats'>
-                                    {displayRating()}
+                                <div className='reserve-top'>
+                                    <div className='price'>
+                                        <img id='bells' src='../../../bells-hd.png'/>
+                                        <p className='price-number'>{spot.price.toLocaleString('en-US')}</p>
+                                        <p className='per-night'>night</p>
+                                    </div>
+                                    <div className='box-review-stats'>
+                                        {displayRating()}
+                                    </div>
                                 </div>
                                 <div className='calloutDivider'></div>
                                 <button onClick={reserve}>Reserve</button>
                             </div>
                         </div>
                     </div>
-
                     <div className='reviews-container'>
                         <div className='reviews-title'>
                             <h2>Reviews</h2>
@@ -162,6 +163,7 @@ function SpotDetail() {
                         <div className='review-stats'>
                             {displayRating()}
                         </div>
+                        <div className='divider-line'></div>
                         {!hasReviews && userIsNotSpotOwner && (
                             <div className='no-reviews'>Be the first to post a review!</div>
                         )}

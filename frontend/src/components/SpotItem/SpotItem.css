@@ -83,7 +83,7 @@
 
 .city-state-price #bells {
     width: 20px;
-    height: 8px;
+    height: 25px;
 }
 
 .rating-container .no-ratings {
@@ -91,6 +91,7 @@
     color: red;
     font-style: italic;
 }
+
 
 
 

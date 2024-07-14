@@ -5,16 +5,17 @@
 
 .spot-details .title {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-weight: heavy;
     /* font-size: 25px */
 }
 .spot-details .title .spot-name {
-    font-size: 33px
+    font-size: 33px;
+    font-weight: bold;
 }
 
 .spot-details .title .spot-location {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .spot-details {
@@ -50,8 +51,9 @@
     height: 100%;
     padding: 15px;
     border-radius: 10px;
-    background-color: #20D7C9;
-    color: black;
+    /* background-color: #20D7C9; */
+    background-color: #00BCAD;
+    color: #f8f7de;
 }
 
 .spot-description .reserve-summary-box .calloutBox {
@@ -60,6 +62,20 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+}
+
+.reserve-top {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+.reserve-top .price #bells {
+    width: 30px;
+    height: 35px;
+    margin-bottom: 10px;
+    margin-right: 5px;
 }
 
 .spot-description .reserve-summary-box .calloutBox .price {
@@ -80,13 +96,13 @@
 .price .per-night {
     font-size: 15px;
     font-weight: normal;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     margin-left: 5px;
 }
 
-.price #bells {
+/* .price #bells {
     height: 25px;
-}
+} */
 
 .calloutBox .box-review-stats .rating {
     display: flex;
@@ -112,7 +128,7 @@
     height: 2px;
     width: 100%;
     margin: 10px 0;
-    background-color: black;
+    background-color: #f8f7de;
 }
 
 .spot-description button {
@@ -123,7 +139,7 @@
     width: 100%;
     border-radius: 10px;
     background-color: #f8f7de;
-    color: black;
+    color: #815C2F;
     font-weight: bold;
     margin-top: 8px;
     cursor: pointer;
@@ -225,12 +241,17 @@
     font-size: 20px;
 }
 
-.reviews-container .review-stats .star-fragment {
+.reviews-container .review-stats .rating #star-fragment {
     display: flex;
-    height: 50px;
-    width: auto;
-    flex-shrink: 0;
-    justify-content: center;
+    height: 35px;
+    width: 35px;
+    margin-right: 4px;
+}
+
+.box-review-stats .rating .star-fragment {
+    width: 32px;
+    height: 32px;
+    margin-right: 2px;
 }
 
 .reviews-container .review-stats .star-num {
@@ -250,15 +271,40 @@
 }
 
 .reviews-container button {
-    all: unset;
+    border: none;
     display: flex;
     justify-content: center;
-    padding: 11px 0;
-    width: 25%;
+    padding: 2px;
+    width: 70px;
+    height: 30px;
     border-radius: 10px;
-    background-color:#20D7C9;
-    color: black;
+    background-color: red;
+    color: #f8f7de;
     font-weight: bold;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     cursor: pointer;
+}
+
+.user-reviews {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.user-reviews .a-review {
+    width: 50%;
+    margin-top: 15px;
+}
+
+.user-reviews .review-owner {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.user-reviews .stars-and-date {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 1.2;
 }
