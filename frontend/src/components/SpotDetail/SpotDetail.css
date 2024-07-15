@@ -4,7 +4,7 @@
 } */
 
 .spot-details .title {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 20px;
     font-weight: heavy;
     /* font-size: 25px */
@@ -51,13 +51,14 @@
 
 .spot-description .reserve-summary-box {
     position: relative;
-    width: 600px;
+    width: 400px;
     height: auto;
     padding: 15px;
     border-radius: 10px;
     /* background-color: #20D7C9; */
     background-color: #00BCAD;
     color: #f8f7de;
+    /* margin-right: 80px; */
 }
 
 .spot-description .reserve-summary-box .calloutBox {
@@ -158,8 +159,10 @@
     width: 100%;
     margin-top: 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    gap: 15px;
 }
 
 .main-image-container {
@@ -179,7 +182,7 @@
 .thumbnail-container {
     display: flex;
     flex-wrap: wrap;
-    width: 490px;
+    width: 500px;
     gap: 10px;
 }
 
@@ -222,6 +225,10 @@
     font-size: 22px;
     margin-top: 15px;
     margin-bottom: 8px;
+}
+
+.spot-description .name-and-description {
+    width: 700px;
 }
 
 .reviews-container {
@@ -278,7 +285,8 @@
     font-style: italic;
 }
 
-.reviews-container button {
+.reviews-container .delete-button {
+    all: unset;
     border: none;
     display: flex;
     justify-content: center;
@@ -315,4 +323,14 @@
     gap: 8px;
     font-size: 14px;
     line-height: 1.2;
+}
+
+.post-review-button {
+    width: 150px;
+    height: 40px;
+    background-color: #815C2F;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: #f8f7de;
+    cursor: pointer;
 }
