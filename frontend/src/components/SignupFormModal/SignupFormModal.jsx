@@ -65,7 +65,6 @@ function SignupFormModal() {
               placeholder='Email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required
             />
           </label>
           <div className='email-error'>
@@ -79,7 +78,6 @@ function SignupFormModal() {
               placeholder='Username'
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              required
             />
           </label>
           <div className='username-error'>
@@ -93,7 +91,6 @@ function SignupFormModal() {
               placeholder='First Name'
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              required
             />
           </label>
           <div className='firstname-error'>
@@ -107,7 +104,6 @@ function SignupFormModal() {
               placeholder='Last Name'
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              required
             />
           </label>
           <div className='lastname-error'>
@@ -121,7 +117,6 @@ function SignupFormModal() {
               placeholder='Password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              required
             />
           </label>
           <div className='password-error'>
@@ -135,7 +130,6 @@ function SignupFormModal() {
               placeholder='Confirm Password'
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              required
             />
           </label>
           <div className='conf-pass-error'>

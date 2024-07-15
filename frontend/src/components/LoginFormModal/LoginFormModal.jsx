@@ -59,7 +59,6 @@ function LoginFormModal() {
               placeholder='Username or Email'
               value={credential}
               onChange={(e) => setCredential(e.target.value)}
-              required
             />
           </label>
           <label className='password'>
@@ -70,7 +69,6 @@ function LoginFormModal() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              required
             />
           </label>
           <div className='error-message'>

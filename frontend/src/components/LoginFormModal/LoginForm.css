@@ -81,6 +81,7 @@
     color: #f8f7de;
     border-radius: 15px;
     padding: 3px;
+    cursor: auto;
 }
 
 .demo-login {
@@ -97,6 +98,7 @@
     margin-right: 85px;
     color: #815C2F;
     border: 2px solid #815C2F;
+    font-weight: bold;
 }
 
 .demo-login .timmy-icon {
