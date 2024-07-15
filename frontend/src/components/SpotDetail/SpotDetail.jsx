@@ -187,9 +187,7 @@ function SpotDetail() {
                                         {sessionUser && sessionUser.id === review.userId && (
                                             <OpenModalButton
                                                 className='delete-button'
-                                                buttonText='Delete'
-                                                // className='delete-review-button'
-                                                modalComponent={<ReviewDeleteModal reviewId={review.id} spotId={spot.id} />}
+                                                buttonText='Delete'                                                modalComponent={<ReviewDeleteModal reviewId={review.id} spotId={spot.id} />}
                                             />
                                         )}
                                     </div>

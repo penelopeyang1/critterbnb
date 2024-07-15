@@ -37,10 +37,11 @@
   border-bottom-right-radius: 20px;
   padding: 5px;
   border: none;
-  background-color: #edd297;
+  background-color: #f8f7de;
   cursor: pointer;
   color: #815C2F;
   font-size: 15px;
+  margin: -70px;
 }
 
 .signup-button-wrapper button {
@@ -50,9 +51,9 @@
   border-bottom-right-radius: 20px;
   padding: 5px;
   border: none;
-  background-color: #f8f7de;
+  background-color: #815C2F;
   cursor: pointer;
-  color: #815C2F;
+  color: #f8f7de;
   font-size: 15px;
 }
 

@@ -20,9 +20,9 @@ module.exports = {
       },
       {
         email: 'urmom@critter.io',
-        firstName: 'Jonny',
-        lastName: 'Diang',
-        username: 'jotnny',
+        firstName: 'Olivia',
+        lastName: 'Cat',
+        username: 'livvykitty',
         hashedPassword: bcrypt.hashSync('potato999')
       },
       {
@@ -50,7 +50,7 @@ module.exports = {
         email: 'pinkmarina@critter.io',
         firstName: 'Marina',
         lastName: 'Octopus',
-        username: 'octopink',
+        username: 'pinkiepie',
         hashedPassword: bcrypt.hashSync('Underthesea!')
       },
       {
@@ -58,6 +58,27 @@ module.exports = {
         firstName: 'Cherry',
         lastName: 'Dog',
         username: 'altpuppy',
+        hashedPassword: bcrypt.hashSync('RockOn!!!')
+      },
+      {
+        email: 'scruffy_billy6@critter.io',
+        firstName: 'Billy',
+        lastName: 'Goat',
+        username: 'goatedgamer',
+        hashedPassword: bcrypt.hashSync('RockOn!!!')
+      },
+      {
+        email: 'bearykewt@critter.io',
+        firstName: 'Maple',
+        lastName: 'Bear',
+        username: 'snugglybear45',
+        hashedPassword: bcrypt.hashSync('RockOn!!!')
+      },
+      {
+        email: 'guinguin@critter.io',
+        firstName: 'Snowcone',
+        lastName: 'Penguin',
+        username: 'pengu',
         hashedPassword: bcrypt.hashSync('RockOn!!!')
       }
     ], { validate: true });
