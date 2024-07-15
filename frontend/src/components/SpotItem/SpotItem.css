@@ -1,5 +1,5 @@
 .spotitem-container {
-    width: 300px;
+    width: 250px;
     margin: 10px 0 10px;
     z-index: 0;
     cursor: pointer;
@@ -12,8 +12,8 @@
 .spotitem-container .image-container {
     position: relative;
     border: 1px solid #ccc;
-    height: 320px;
-    width: 300px;
+    height: 270px;
+    width: 250px;
     border-radius: 18px;
     overflow: hidden;
     display: flex;
