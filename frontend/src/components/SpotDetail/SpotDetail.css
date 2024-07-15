@@ -1,8 +1,3 @@
-/* .star-fragment {
-    width: 40px;
-    height: auto;
-} */
-
 .spot-details .title {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -33,17 +28,6 @@
     margin-top: 30px;
 }
 
-/* .reserve-summary-box {
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-} */
 
 .spot-description .host-name {
     font-weight: bold;
@@ -106,24 +90,12 @@
     margin-left: 5px;
 }
 
-/* .price #bells {
-    height: 25px;
-} */
-
 .calloutBox .box-review-stats .rating {
     display: flex;
     flex-direction: row;
     align-items: center;
     font-size: 20px;
 }
-
-/* .calloutBox .box-review-stats .star-fragment {
-    display: flex;
-    height: 50px;
-    width: auto;
-    flex-shrink: 0;
-    justify-content: center;
-} */
 
 .calloutBox .box-review-stats .star-num {
     font-size: 15px;
@@ -150,10 +122,7 @@
     margin-top: 8px;
     cursor: pointer;
 }
-/* .reserve-summary-box .calloutBox {
-    justify-content: right;
-    display: flex;
-} */
+
 
 .all-images {
     position: relative;

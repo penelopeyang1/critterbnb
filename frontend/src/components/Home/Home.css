@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
-    padding-top: 100px;
+    /* padding-top: 100px; */
     padding-bottom: 100px;
 }
 
@@ -11,16 +11,17 @@
     flex: 1;
     text-align: left;
     margin-left: 110px;
-    margin-top: -39px;
     margin-right: 80px;
+    padding-top: 100px;
     /* fix dimensions later */
     /* come back to this when getting greenlit */
 }
 
 .display-spots {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;
+    /* justify-content: left; */
     gap: 50px;
 }
 
@@ -58,7 +59,7 @@
     padding: 10px 0;
 }
 
-.map {
+/* .map {
     width: 725px;
     height: auto;
     margin-top: 30px;
@@ -68,12 +69,11 @@
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     border: 5px solid #edd297;
+} */
 
-}
-
-.map-container {
+/* .map-container {
     flex-shrink: 0;
-}
+} */
 
 .favorites-title {
     display: flex;
