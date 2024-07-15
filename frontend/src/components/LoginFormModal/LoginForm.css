@@ -69,6 +69,20 @@
     padding: 3px;
 }
 
+.login-button:disabled {
+    width: 80px;
+    cursor: pointer;
+    margin-left: 135px;
+    margin-right: 135px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: #84827f;
+    color: #f8f7de;
+    border-radius: 15px;
+    padding: 3px;
+}
+
 .demo-login {
     /* border: none; */
     cursor: pointer;
