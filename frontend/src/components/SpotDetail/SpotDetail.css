@@ -252,12 +252,10 @@
 .rating-new {
     font-weight: bold;
     color: red;
-    font-style: italic;
 }
 
 .no-reviews {
     font-size: 25px;
-    font-style: italic;
 }
 
 .reviews-container .delete-button {
