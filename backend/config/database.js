@@ -1,4 +1,6 @@
 // backend/config/database.js
+console.log("Resolved DB_FILE path:", require('./index').dbFile);
+
 const config = require('./index');
 
 module.exports = {
